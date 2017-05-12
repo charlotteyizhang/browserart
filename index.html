@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Isolation City | Demo 1</title>
+	<meta name="description" content="MyIsolation" />
+	<meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<div class="container demo-1">
+	
+		<video id="my-video" class="video" muted loop>
+		  <source src="img/city1.mp4" type="video/mp4">
+		<!--   <source src="media/city1.ogv" type="video/ogg">
+  			<source src="media/city1.webm" type="video/webm"> -->
+		</video><!-- /video -->
+		<div class="content">
+			<div id="large-header" class="large-header">
+			<div><h1>When I am alone</h1></div>
+			<!--My canvas to draw-->
+			<div id="tweets-container" class="tweets-container" style="display: none;">
+	            <p>...</p>
+	        </div>
+				<canvas id="demo-canvas"></canvas>
+				<!-- <div id="canvas" class="canvas"></div> -->
+				<!-- <h1 class="main-title">LONELY <span class="thin">CITY</span></h1> -->
+			</div>
+		</div>
+		<div id="demo-small-pics" class="main-title"></div>
+		<div id="demo-pics" style="display: none;">
+			<img alt="0" class="main-title opaque" src="img/reading.png" style="max-width: 800px;">
+			<img alt="1" class="main-title" src="img/laptop.png" style="max-width: 800px">
+			<img alt="2" class="main-title" src="img/coffee.png" style="max-width: 600px">
+			<p id="demo-pics-controls">
+				<span class="selected">Reading my favourite novel</span>
+				<span>Writing my dirary</span>
+				<span>Making coffee</span>
+<!-- 
+			<span id="current-time"></span> -->
+			</p>
+			<div class="close-modal" id="close" data-dismiss="modal">
+	            <div class="lr">
+	                <div class="rl">
+	                </div>
+	            </div>
+        	</div>
+		</div>
+	</div><!-- /container -->
+
+<!--JS-->
+
+<!--jQuery AJAX-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!--Effects-->
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="js/rAF.js"></script>
+
+<script src="js/twitter.js"></script>
+<script src="js/demo-1.js"></script>
+<script src="js/svgChart.js"></script>
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+	</body>
+</html>
